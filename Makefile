@@ -1,12 +1,12 @@
 
 
 DEVICE = atmega328p
-F_CPU = 8000000L
+F_CPU = 16000000L
 
 CC = avr-gcc
-CC_ARGS= -mmcu=$(DEVICE) -D F_CPU=$(F_CPU) -O1 -ggdb -Wall -I$(INCLUDE_PATH)
+CC_ARGS= -mmcu=$(DEVICE) -D F_CPU=$(F_CPU) -Os -ggdb -Wall -I$(INCLUDE_PATH)
 
-INCLUDE_PATH =./src -I ./include -I ./port/atmega328
+INCLUDE_PATH =./src -I ./include -I ./port/AVR
 
 AVRDUDE = avrdude
 AVRDUDE_ARGS = -Cavrdude.conf -F -v -pm328p -carduino -PCOM10 -b115200 -D

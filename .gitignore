@@ -1,5 +1,6 @@
 .vscode/
-debug
+debug/
 ATmega328P-ATMEL.pdf
 main.c
 avrdude.conf
+make
